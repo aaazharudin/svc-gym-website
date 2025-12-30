@@ -29,6 +29,8 @@
     gap: 1rem;
     color: white;
     justify-content: space-between;
+    transition: all 0.3s ease;
+    border-radius: 4px;
 }
 
 .category >:nth-child(1) {
@@ -59,8 +61,12 @@
 }
 
 .category:hover {
-    background: var(--planCard);
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
     cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.15);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    transition: all 0.3s ease;
 }
 
 @media screen and (max-width: 786px) {

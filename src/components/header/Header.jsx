@@ -27,24 +27,16 @@ const Header = () => {
     <div className={`header ${scrolled ? 'scrolled' : ''}`}>
         <img src={Logo} alt="" className="logo"/>
         {menuOpened === false && mobile === true ? (
-          <div style={{
-            backgroundColor: 'var(--appColor)',
-            padding: '0.5rem',
-            borderRadius: '5px'
-          }}
-            onClick={() => setMenuOpened(true)}
-          >
-            <img 
-              src={Bars} 
-              alt="" 
-              style={{
-                width: '1.5rem', 
-                height: '1.5rem'
-              }}
-            /> 
+          <div className="menu-icon" onClick={() => setMenuOpened(true)}>
+            <img src={Bars} alt="Menu" />
           </div>
           ) : (
           <ul className="header-menu">
+            {mobile && (
+              <li className="close-menu" onClick={() => setMenuOpened(false)}>
+                ✕
+              </li>
+            )}
             <li>
               <Link
                 onClick={() => setMenuOpened(false)}
@@ -57,7 +49,7 @@ const Header = () => {
               </Link>
             </li>
             <li onClick={() => setMenuOpened(false)}>
-              <Link 
+              <Link
                 onClick={() => setMenuOpened(false)}
                 to='programs'
                 span={true}
@@ -67,7 +59,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-            <Link 
+            <Link
                 onClick={() => setMenuOpened(false)}
                 to='reasons'
                 span={true}
@@ -77,7 +69,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link 
+              <Link
                 onClick={() => setMenuOpened(false)}
                 to='plans'
                 span={true}
@@ -87,7 +79,7 @@ const Header = () => {
               </Link>
             </li>
             <li >
-            <Link 
+            <Link
               onClick={() => setMenuOpened(false)}
               to='testimonials'
               span={true}

@@ -5,17 +5,11 @@ import './Join.css'
 
 const Join = () => {
 
-    const form = useRef()
-
-    const sendEmail = (e) => {
-        e.preventDefault();
-    
-        emailjs.sendForm('service_h9g0btg', 'template_5urckpa', form.current, 'GJAtl73WZaFyf9KlA')
-          .then((result) => {
-              console.log(result.text);
-          }, (error) => {
-              console.log(error.text);
-          });
+    const handleJoinNow = () => {
+        const plansSection = document.getElementById('plans');
+        if (plansSection) {
+            plansSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     };
 
     return (
@@ -32,18 +26,14 @@ const Join = () => {
                 </div>
             </div>
             <div className="right-j">
-                <form 
-                    ref={form} 
-                    className="email-container" 
-                    onSubmit={sendEmail}
-                >
-                    <input 
-                        type="email" 
-                        name="user_email" 
-                        placeholder="Enter your email address"
-                    />
-                    <button className="btn btn-j">Join Now</button>
-                </form>
+                <div className="email-container">
+                    <p className="join-description">
+                        Choose the perfect plan for your fitness journey
+                    </p>
+                    <button className="btn btn-j" onClick={handleJoinNow}>
+                        View Plans →
+                    </button>
+                </div>
             </div>
         </div>
   )

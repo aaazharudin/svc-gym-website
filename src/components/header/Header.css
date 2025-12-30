@@ -1,18 +1,21 @@
 .header {
     display: flex;
     justify-content: space-between;
-    position: sticky;
+    position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
-    padding: 1rem 2rem;
+    padding: 1.5rem 3rem;
     transition: all 0.3s ease;
 }
 
 .header.scrolled {
+    position: fixed;
     background: rgba(15, 15, 30, 0.95);
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 20px rgba(0, 212, 255, 0.1);
-    padding: 0.5rem 2rem;
+    box-shadow: 0 4px 20px rgba(0, 212, 255, 0.2);
+    padding: 1rem 3rem;
 }
 
 .logo {
@@ -26,6 +29,17 @@
     height: 2.5rem;
 }
 
+.logo1 {
+    width: 10rem;
+    height: 3rem;
+    transition: all 0.3s ease;
+}
+
+.header.scrolled .logo1 {
+    width: 8rem;
+    height: 2.5rem;
+}
+
 .header-menu {
     list-style: none;
     display: flex;
@@ -34,8 +48,43 @@
 }
 
 .header-menu > li:hover {
-    color: var(--orange);
+    color: var(--primary);
     cursor: pointer;
+}
+
+.menu-icon {
+    background: rgba(0, 212, 255, 0.1);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    padding: 0.7rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu-icon:hover {
+    background: rgba(0, 212, 255, 0.2);
+    border-color: rgba(0, 212, 255, 0.5);
+}
+
+.menu-icon img {
+    width: 1.5rem;
+    height: 1.5rem;
+    filter: brightness(0) invert(1);
+}
+
+.close-menu {
+    font-size: 2rem;
+    text-align: right;
+    padding: 0.5rem 1rem;
+    color: var(--primary) !important;
+    cursor: pointer;
+}
+
+.close-menu:hover {
+    color: white !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -46,7 +95,22 @@
     }
     .header-menu {
         flex-direction: column;
-        background-color: var(--appColor);
-        padding: 2rem;
+        background: rgba(26, 26, 46, 0.98);
+        backdrop-filter: blur(20px);
+        padding: 1rem;
+        border-radius: 16px;
+        border: 1px solid rgba(0, 212, 255, 0.2);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        min-width: 200px;
+    }
+
+    .header-menu > li {
+        padding: 1rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .header-menu > li:hover {
+        background: rgba(0, 212, 255, 0.1);
     }
 }

@@ -4,8 +4,16 @@ import whiteTick from '../../assets/whiteTick.png'
 import './Plans.css'
 
 const Plans = () => {
+  const phoneNumber = "6281234567890";
+
+  const handleJoinNow = (plan) => {
+    const message = `Hi! I'm interested in joining the ${plan.name} plan (${plan.price}/month). Can you provide more information about this membership package?`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
-    <div className="plans-container">
+    <div className="plans-container" id="plans">
         <div className="blur plans-blur-1"></div>
         <div className="blur plans-blur-2"></div>
         <div 
@@ -21,7 +29,7 @@ const Plans = () => {
                 <div className="plan" key={i}>
                     {plan.icon}
                     <span>{plan.name}</span>
-                    <span>$ {plan.price}</span>
+                    <span>{plan.price}</span>
 
                     <div className="features">
                     {plan.features.map((feature, i) => (
@@ -32,9 +40,9 @@ const Plans = () => {
                     ))}
                     </div>     
                     <div>
-                        <span>See more benefits -></span>
-                    </div>    
-                    <button className="btn">Join now</button>
+                        <span>See more benefits →</span>
+                    </div>
+                    <button className="btn" onClick={() => handleJoinNow(plan)}>Join now</button>
                 </div>  
             ))}
         </div>

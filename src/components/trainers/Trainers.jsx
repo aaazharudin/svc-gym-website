@@ -3,6 +3,14 @@ import { trainersData } from '../../data/trainersData';
 import './Trainers.css';
 
 const Trainers = () => {
+  const phoneNumber = "6281234567890";
+
+  const handleBookSession = (trainer) => {
+    const message = `Hi! I'm interested in booking a personal training session with ${trainer.name} (${trainer.specialty}). Can you provide more information about availability and pricing?`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <div className="trainers-section" id="trainers">
       <div className="trainers-header">
@@ -47,7 +55,12 @@ const Trainers = () => {
                 ))}
               </div>
 
-              <button className="btn-contact-trainer">Book Session</button>
+              <button
+                className="btn-contact-trainer"
+                onClick={() => handleBookSession(trainer)}
+              >
+                Book Session
+              </button>
             </div>
           </div>
         ))}

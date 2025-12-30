@@ -9,6 +9,13 @@ import image4 from '../../assets/image4.png';
 const Gallery = () => {
   const [activeTab, setActiveTab] = useState('facilities');
 
+  const handleGetStarted = () => {
+    const plansSection = document.getElementById('plans');
+    if (plansSection) {
+      plansSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   const facilitiesImages = [
     { src: image1, title: 'Cardio Zone', description: 'State-of-the-art cardio equipment' },
     { src: image2, title: 'Weight Training Area', description: 'Professional-grade weights and machines' },
@@ -89,7 +96,7 @@ const Gallery = () => {
 
       <div className="gallery-cta">
         <h3>Ready to Start Your Transformation?</h3>
-        <button className="btn-cta">Get Started Today</button>
+        <button className="btn-cta" onClick={handleGetStarted}>Get Started Today</button>
       </div>
     </div>
   );

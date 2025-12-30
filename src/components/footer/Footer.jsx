@@ -1,22 +1,30 @@
 import React from 'react'
 import './Footer.css'
-import Github from '../../assets/github.png';
 import Instagram from '../../assets/instagram.png';
-import LinkedIn from '../../assets/linkedin.png';
-import Logo from '../../assets/logo.png';
+import TikTok from '../../assets/tik-tok.png';
 
 const Footer = () => {
+  // Update these URLs with your actual social media handles
+  const socialLinks = {
+    instagram: "https://www.instagram.com/yourgymnamehere",
+    tiktok: "https://www.tiktok.com/@yourgymnamehere"
+  };
+
   return (
     <div className="Footer-container">
         <hr/>
         <div className="footer">
-            <div className="social-links">
-                <img src={Github} alt=""/>
-                <img src={Instagram} alt=""/>
-                <img src={LinkedIn} alt=""/>
+            <div className="footer-content">
+                <h3 className="footer-heading">Join Our Fitness Community</h3>
+                <p className="footer-subtitle">Follow us for daily workout tips, transformation stories, and exclusive offers!</p>
             </div>
-            <div className="logo-f">
-                <img src={Logo} alt=""/>
+            <div className="social-links">
+                <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer">
+                  <img src={Instagram} alt="Instagram"/>
+                </a>
+                <a href={socialLinks.tiktok} target="_blank" rel="noopener noreferrer">
+                  <img src={TikTok} alt="TikTok"/>
+                </a>
             </div>
         </div>
         <div className="blur blur-f-1"></div>
