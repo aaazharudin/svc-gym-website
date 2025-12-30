@@ -1,77 +1,109 @@
-## Gym Website 🎯
+# Elite Fitness Center 💪
 
-React responsive Gym Website using ReactJs 
+Modern, fully-featured gym and fitness center website built with React.
 
-![Language count](https://img.shields.io/github/languages/count/letnagao/gym-website?color=green)
-![Top language](https://img.shields.io/github/languages/top/letnagao/gym-website?color=ff69b4)
-![Repo size](https://img.shields.io/github/repo-size/letnagao/gym-website?color=yellow)
-![Commit Activity](https://img.shields.io/github/commit-activity/y/letnagao/gym-website?color=blue)
-![Latest commit](https://img.shields.io/github/last-commit/letnagao/gym-website?color=red)
-[![GitHub watchers](https://img.shields.io/github/watchers/letnagao/gym-website?logo=GitHub)](https://github.com/letnagao/gym-website/watchers)
-![Maintained](https://img.shields.io/maintenance/yes/9999)
+## 🌟 Features
 
-</ul><h2> Preview ⚡️</h2>
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/99754900/178131437-4b89e398-f451-46b5-b40e-a5fa2275166c.jpg" />
-</p>
+- **Interactive BMI Calculator** - Real-time health metrics calculation
+- **Class Schedule** - Weekly timetable with 30+ classes across 7 days
+- **Trainer Profiles** - Meet our 6 certified expert trainers
+- **Photo Gallery** - Facilities showcase and member transformations
+- **FAQ Section** - Interactive accordion with common questions
+- **Membership Plans** - 3 tier pricing with detailed features
+- **WhatsApp Integration** - Floating contact button for instant messaging
+- **Sticky Header** - Smooth scroll-responsive navigation
+- **Testimonials** - Real member success stories
+- **Responsive Design** - Fully optimized for mobile and desktop
 
-## Features 🔥
-✔️ Registration and Authentication with email <br />
-✔️ Persistant data with local storage <br />
-✔️ Asynchronous events handling <br />
-✔️ Performance improvement with lazy loading <br />
+## 🚀 Tech Stack
 
-## Website 💻
-https://the-fit-club.pages.dev/
+- **React 18.2** - Modern React with Hooks
+- **Framer Motion** - Smooth animations
+- **React Scroll** - Smooth page navigation
+- **EmailJS** - Newsletter integration
+- **CSS3** - Custom styling with CSS variables
 
-## Technologies used 🛠️
-**Design**: *Css & Styled Components*<br />
-**Backend**: *NodeJs* <br />
-**Libraries**: <br />
-    - **redux-logger**: console logging redux data flow <br />
-    - **redux**: state management <br />
-    - **redux-thunk**: handling asynchronous events <br />
-    - **reselect**: reusing redux selectors in a performant way <br />
-    - **redux-persist**: storing data in local storage <br />
-    - **concurrently**: for running multiple scripts concurrently <br />
-
-## Usage 📋
-<details open>
-<summary>Server Setup</summary>
+## 📦 Installation
 
 ```bash
-#1. clone this project
-~ git clone https://github.com/letnagao/gym-website.git
-#2. cd into it
-~ cd gym-website
-#3. install serevr dependencies
-~ npm i
-#3. install client dependencies
-~ cd client && npm i
-#4. run app (both client & server)
-~ npm run dev
+# Clone the repository
+git clone <your-repo-url>
+
+# Navigate to project directory
+cd gym-website
+
+# Install dependencies
+npm install
+
+# Start development server
+npm start
 ```
-*available scripts*
+
+## 🛠️ Available Scripts
+
 ```bash
-~ npm run client
-~ npm run server
-~ npm run build
-~ npm run dev
-~ npm start
+npm start       # Run development server (localhost:3000)
+npm build       # Build for production
+npm test        # Run tests
+npm eject       # Eject from Create React App
 ```
 
-</details>
+## 🎨 Customization
 
-## Disclamer ❗️
-A word of disclaimer, I may have made some changes to it or added other content, but the code is not completely original!
-I am simply a student passionate about Front-end and the intersection of code and design, I always try to do courses and projects during my free time, so I must warn you that this code is NOT ORIGINAL.
+### Update Brand Colors
+Edit `src/App.css` variables:
+```css
+--primary: #00d4ff;
+--secondary: #0099ff;
+--accent: #00ffaa;
+```
 
-You can find the source of this code via: https://www.patreon.com/zainkeepscode
+### Update Content
+- Programs: `src/data/programsData.js`
+- Pricing: `src/data/plansData.js`
+- Testimonials: `src/data/testimonialsData.js`
+- Trainers: `src/data/trainersData.js`
 
-## Contributing 💡
-Pull request are welcome but please open an issue and discuss what you will do before 😊
+### Update WhatsApp Number
+Edit `src/components/whatsapp-button/WhatsAppButton.jsx:6`
 
-## Like this project? 💖
+### Replace Images
+Upload your images to `src/assets/` and update imports
 
-If you are feeling generous, buy me a coffee! - https://www.buymeacoffee.com/lunagao
+## 📱 Sections
 
+1. Hero Section - Main landing with animated stats
+2. Programs - 4 fitness programs
+3. Why Choose Us - Benefits and reasons
+4. Pricing Plans - 3 membership tiers
+5. BMI Calculator - Interactive health tool
+6. Class Schedule - Weekly timetable
+7. Trainers - Team profiles
+8. Gallery - Facilities & transformations
+9. Testimonials - Member reviews
+10. FAQ - Common questions
+11. Newsletter - Email subscription
+12. Footer - Links and social media
+
+## 🌐 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## 📄 License
+
+This project is open source and available for personal and commercial use.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## 📧 Contact
+
+For any inquiries, please contact through the website's WhatsApp button or email form.
+
+---
+
+**Built with ❤️ using React**

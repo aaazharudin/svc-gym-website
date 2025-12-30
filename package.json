@@ -1,7 +1,9 @@
 {
-  "name": "gym-website",
-  "version": "0.1.0",
+  "name": "elite-fitness-center",
+  "version": "1.0.0",
   "private": true,
+  "description": "Modern gym and fitness center website with interactive features",
+  "author": "azharudin",
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
     "@testing-library/jest-dom": "^5.16.4",

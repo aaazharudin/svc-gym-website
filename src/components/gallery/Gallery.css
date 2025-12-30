@@ -1,0 +1,246 @@
+.gallery-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 0 2rem;
+}
+
+.gallery-header {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.gallery-tabs {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.tab-button {
+  padding: 1rem 3rem;
+  background: var(--cardBg);
+  border: 2px solid var(--darkGrey);
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  border-color: var(--orange);
+}
+
+.tab-button.active {
+  background: var(--orange);
+  border-color: var(--orange);
+}
+
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.facility-card {
+  position: relative;
+  height: 300px;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.facility-card:hover {
+  transform: scale(1.05);
+}
+
+.facility-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.facility-card:hover img {
+  transform: scale(1.1);
+}
+
+.facility-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  padding: 2rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.facility-card:hover .facility-overlay {
+  transform: translateY(0);
+}
+
+.facility-overlay h4 {
+  color: var(--orange);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.facility-overlay p {
+  color: var(--lightgray);
+  font-size: 1rem;
+}
+
+.transformations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.transformation-card {
+  background: var(--cardBg);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.transformation-card:hover {
+  border-color: var(--orange);
+  transform: translateY(-5px);
+}
+
+.before-after {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.image-container {
+  flex: 1;
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  border: 3px solid var(--darkGrey);
+}
+
+.image-container .label {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  background: var(--orange);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.3rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.arrow {
+  font-size: 2rem;
+  color: var(--orange);
+  font-weight: bold;
+}
+
+.transformation-info {
+  text-align: center;
+}
+
+.transformation-info h4 {
+  color: white;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.transformation-info p {
+  color: var(--orange);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.gallery-cta {
+  text-align: center;
+  padding: 3rem;
+  background: var(--cardBg);
+  border-radius: 1.5rem;
+  border: 2px solid var(--orange);
+  max-width: 800px;
+  margin: 2rem auto 0;
+}
+
+.gallery-cta h3 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-cta {
+  padding: 1.2rem 3rem;
+  background: var(--orange);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+  background: var(--secondary);
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+  .gallery-header {
+    font-size: 2rem;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .gallery-tabs {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .tab-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .facilities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .transformations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .before-after {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .arrow {
+    transform: rotate(90deg);
+  }
+}

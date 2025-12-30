@@ -1,11 +1,29 @@
 .header {
     display: flex;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 1rem 2rem;
+    transition: all 0.3s ease;
+}
+
+.header.scrolled {
+    background: rgba(15, 15, 30, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 212, 255, 0.1);
+    padding: 0.5rem 2rem;
 }
 
 .logo {
     width: 10rem;
     height: 3rem;
+    transition: all 0.3s ease;
+}
+
+.header.scrolled .logo {
+    width: 8rem;
+    height: 2.5rem;
 }
 
 .header-menu {

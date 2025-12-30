@@ -6,20 +6,20 @@ export const testimonialsData = [
   {
     image: image1,
     review:
-      "I made the right choice by choosing the Fitclub and by choosing the right plan and program I already achieved my ideal body!",
-    name: 'MATHEW HENDRICKSON',
-    status : 'ENTREPRENEUR'
+      "Joining this gym was a game-changer! The trainers are incredibly knowledgeable and supportive. I've lost 30 pounds and gained so much confidence in just 6 months!",
+    name: 'SARAH MITCHELL',
+    status : 'FITNESS ENTHUSIAST'
   },
   {
     image: image2,
-    review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ipsam, ab itaque nam perferendis impedit sint ',
-    name: 'JOHN KEVIN',
-    status: 'COACH'
+    review: 'Best investment I ever made! The Elite plan gave me access to personalized training that transformed not just my body, but my entire lifestyle. Highly recommend!',
+    name: 'MARCUS JOHNSON',
+    status: 'BUSINESS EXECUTIVE'
   },
   {
     image : image3,
-    review:' Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima aspernatur quod voluptatem',
-    name: 'FRANKLIN',
-    status: "CUSTOMER"
+    review:'The community here is amazing! Everyone is so encouraging and the facilities are top-notch. I finally found a gym where I actually enjoy working out every day.',
+    name: 'EMMA RODRIGUEZ',
+    status: "PROFESSIONAL ATHLETE"
   }
 ];

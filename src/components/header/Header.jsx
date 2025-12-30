@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Logo from '../../assets/logo.png';
 import Bars from '../../assets/bars.png';
 import { Link } from 'react-scroll';
@@ -7,9 +7,24 @@ import './Header.css';
 const Header = () => {
   const mobile = window.innerWidth <= 768 ? true : false;
   const [menuOpened, setMenuOpened] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <div className="header">
+    <div className={`header ${scrolled ? 'scrolled' : ''}`}>
         <img src={Logo} alt="" className="logo"/>
         {menuOpened === false && mobile === true ? (
           <div style={{

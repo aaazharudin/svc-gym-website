@@ -1,0 +1,145 @@
+.class-schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 0 2rem;
+}
+
+.schedule-header {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.schedule-subtitle {
+  text-align: center;
+  color: var(--gray);
+  font-size: 1.2rem;
+  margin-top: -1.5rem;
+}
+
+.schedule-days {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.day-button {
+  padding: 0.8rem 1.5rem;
+  background: var(--cardBg);
+  border: 2px solid var(--darkGrey);
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.day-button:hover {
+  border-color: var(--orange);
+  transform: translateY(-2px);
+}
+
+.day-button.active {
+  background: var(--orange);
+  border-color: var(--orange);
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+}
+
+.schedule-classes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.class-card {
+  background: var(--cardBg);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.class-card:hover {
+  border-color: var(--orange);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.2);
+}
+
+.class-time {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--orange);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.class-time svg {
+  color: var(--orange);
+}
+
+.class-details h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.class-meta {
+  display: flex;
+  gap: 1.5rem;
+  color: var(--gray);
+  font-size: 0.95rem;
+}
+
+.btn-book {
+  margin-top: auto;
+  padding: 0.8rem 1.5rem;
+  background: transparent;
+  border: 2px solid var(--orange);
+  color: var(--orange);
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-book:hover {
+  background: var(--orange);
+  color: white;
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+  .schedule-header {
+    font-size: 2rem;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .schedule-days {
+    gap: 0.5rem;
+  }
+
+  .day-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .schedule-classes {
+    grid-template-columns: 1fr;
+  }
+}

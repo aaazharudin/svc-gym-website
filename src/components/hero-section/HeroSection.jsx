@@ -25,61 +25,56 @@ const HeroSection = () => {
                         whileInView={{left: '8px'}}
                         transition={{...transition, type: "tween"}}
                     ></motion.div>
-                    <span>the best fitness club in the town</span>
+                    <span>Transform Your Body, Transform Your Life</span>
                 </div>
 
                 <div className="hero-text">
                     <div>
-                        <span className="stroke-text">Shape </span>
+                        <span className="stroke-text">Build </span>
                         <span>Your</span>
                     </div>
                     <div>
-                        <span>Ideal body</span>
+                        <span>Dream Physique</span>
                     </div>
                     <div>
                         <span>
-                            In here we will help you to shape and build your ideal body and live up your life to fullest
+                            Join our elite fitness community and unlock your full potential with personalized training programs and expert guidance
                         </span>
                     </div>
                 </div>
                 <div className="figures">
                     <div>
                         <span>
-                            <NumberCounter 
-                                end={140} 
-                                start={69} 
+                            <NumberCounter
+                                end={200}
+                                start={100}
                                 delay="3"
-                                preFix="+" 
+                                preFix="+"
                             />
                         </span>
-                        <span>expert coachs</span>
-                    </div>
-                    <div><NumberCounter 
-                                end={978} 
-                                start={800} 
-                                delay="4"
-                                preFix="+" 
-                            />
-                        <span>
-                            <NumberCounter 
-                                end={978} 
-                                start={779} 
-                                delay="3"
-                                preFix="+" 
-                            />
-                        </span>
-                        <span>members</span>
+                        <span>certified trainers</span>
                     </div>
                     <div>
                         <span>
-                            <NumberCounter 
-                                end={50} 
-                                start={10} 
+                            <NumberCounter
+                                end={1500}
+                                start={1000}
                                 delay="3"
-                                preFix="+" 
+                                preFix="+"
                             />
                         </span>
-                        <span>fitness programs</span>
+                        <span>active members</span>
+                    </div>
+                    <div>
+                        <span>
+                            <NumberCounter
+                                end={75}
+                                start={20}
+                                delay="3"
+                                preFix="+"
+                            />
+                        </span>
+                        <span>training programs</span>
                     </div>
                 </div>
                 <div className="hero-buttons">
