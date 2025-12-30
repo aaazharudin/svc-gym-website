@@ -36,11 +36,25 @@
     gap: 2rem;
     padding: 1.5rem;
     width: 15rem;
+    border: 2px solid transparent;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.plan:hover {
+    border-color: var(--orange);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 103, 1, 0.3);
 }
 
 .plan:nth-child(2) {
     background: var(--planCard);
     transform: scale(1.1);
+}
+
+.plan:nth-child(2):hover {
+    transform: scale(1.12) translateY(-10px);
 }
 
 .plan>svg {
@@ -93,5 +107,11 @@
     }
     .plans > :nth-child(2) {
         transform: none;
+    }
+    .plan:hover {
+        transform: translateY(-5px) scale(1.02);
+    }
+    .plan:nth-child(2):hover {
+        transform: translateY(-5px) scale(1.02);
     }
 }

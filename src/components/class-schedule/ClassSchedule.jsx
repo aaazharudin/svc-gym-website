@@ -4,6 +4,38 @@ import './ClassSchedule.css';
 const ClassSchedule = () => {
   const [activeDay, setActiveDay] = useState('Monday');
 
+  // Google Form URL
+  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScb1FpClOMnJsUTPuekiO4LZJZ1tNGZcj6OMka8hZNPyPtQjA/viewform";
+
+  // Convert 12-hour time format to 24-hour format
+  const convertTo24Hour = (time12h) => {
+    const [time, modifier] = time12h.split(' ');
+    let [hours, minutes] = time.split(':');
+
+    if (hours === '12') {
+      hours = '00';
+    }
+
+    if (modifier === 'PM') {
+      hours = parseInt(hours, 10) + 12;
+    }
+
+    return `${hours}:${minutes}`;
+  };
+
+  const handleBookClass = (classItem, day) => {
+    // Convert time to 24-hour format for Google Form
+    const time24h = convertTo24Hour(classItem.time);
+
+    const formUrl = new URL(GOOGLE_FORM_URL);
+    formUrl.searchParams.append('entry.1105150597', classItem.class); // Nama Kelas
+    formUrl.searchParams.append('entry.1238945204', day); // Hari
+    formUrl.searchParams.append('entry.360368', time24h); // Waktu (24-hour format)
+    formUrl.searchParams.append('entry.154932447', classItem.trainer); // Trainer
+
+    window.open(formUrl.toString(), '_blank');
+  };
+
   const schedule = {
     Monday: [
       { time: '06:00 AM', class: 'Yoga Flow', trainer: 'Sarah Mitchell', duration: '60 min' },
@@ -95,7 +127,9 @@ const ClassSchedule = () => {
                 <span className="duration">⏱ {item.duration}</span>
               </div>
             </div>
-            <button className="btn-book">Book Now</button>
+            <button className="btn-book" onClick={() => handleBookClass(item, activeDay)}>
+              Book Now
+            </button>
           </div>
         ))}
       </div>

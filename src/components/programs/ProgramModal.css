@@ -1,0 +1,260 @@
+.program-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.program-modal-content {
+  background: linear-gradient(135deg, rgba(30, 30, 40, 0.95) 0%, rgba(15, 15, 30, 0.95) 100%);
+  border-radius: 20px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUp 0.3s ease;
+  border: 1px solid rgba(255, 103, 1, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 103, 1, 0.2);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.modal-close:hover {
+  background: var(--orange);
+  transform: rotate(90deg);
+}
+
+.modal-header {
+  text-align: center;
+  padding: 2rem 2rem 1rem;
+  border-bottom: 1px solid rgba(255, 103, 1, 0.2);
+}
+
+.modal-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--orange) 0%, #ff6b00 100%);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(255, 103, 1, 0.3);
+}
+
+.modal-icon svg {
+  width: 30px;
+  height: 30px;
+  fill: white;
+}
+
+.modal-header h2 {
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.modal-section {
+  margin-bottom: 2rem;
+}
+
+.modal-section:last-child {
+  margin-bottom: 0;
+}
+
+.modal-section h3 {
+  color: var(--orange);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.modal-section p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.schedule-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.schedule-list li {
+  background: rgba(255, 103, 1, 0.1);
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.9);
+  border-left: 3px solid var(--orange);
+}
+
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.pricing-card {
+  background: rgba(255, 103, 1, 0.1);
+  padding: 1.5rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.pricing-card:hover {
+  border-color: var(--orange);
+  transform: translateY(-5px);
+}
+
+.pricing-card.popular {
+  border-color: var(--orange);
+  background: rgba(255, 103, 1, 0.15);
+}
+
+.pricing-card h4 {
+  color: white;
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.pricing-card .price {
+  color: var(--orange);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  background: var(--orange);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.modal-footer {
+  padding: 1.5rem 2rem 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 103, 1, 0.2);
+}
+
+.btn-join {
+  background: linear-gradient(135deg, var(--orange) 0%, #ff6b00 100%);
+  color: white;
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 103, 1, 0.3);
+}
+
+.btn-join:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 103, 1, 0.5);
+}
+
+/* Scrollbar styling */
+.program-modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.program-modal-content::-webkit-scrollbar-track {
+  background: rgba(255, 103, 1, 0.1);
+  border-radius: 10px;
+}
+
+.program-modal-content::-webkit-scrollbar-thumb {
+  background: var(--orange);
+  border-radius: 10px;
+}
+
+.program-modal-content::-webkit-scrollbar-thumb:hover {
+  background: #ff6b00;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+  .program-modal-content {
+    width: 95%;
+    max-height: 85vh;
+  }
+
+  .modal-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .modal-body {
+    padding: 1.5rem;
+  }
+
+  .pricing-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-join {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+  }
+}

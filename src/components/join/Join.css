@@ -15,7 +15,7 @@
 .left-j>hr {
     position: absolute;
     width: 10.5rem;
-    border: 2px solid var(--orange);
+    border: 2px solid var(--primary);
     border-radius: 20%;
     margin: -10px 0;
 }
@@ -33,9 +33,32 @@
 
 .email-container {
     display: flex;
-    gap: 3rem;
-    background-color: gray;
-    padding: 1rem 2rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(22, 33, 62, 0.9) 100%);
+    backdrop-filter: blur(20px);
+    padding: 2.5rem 3rem;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3),
+                0 0 20px rgba(0, 212, 255, 0.1);
+    transition: all 0.3s ease;
+    min-width: 400px;
+}
+
+.email-container:hover {
+    border-color: rgba(0, 212, 255, 0.5);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4),
+                0 0 30px rgba(0, 212, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.join-description {
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
+    text-align: center;
 }
 
 .email-container>input {
@@ -50,8 +73,21 @@
 }
 
 .btn-j {
-    background-color: var(--orange);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
     color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);
+}
+
+.btn-j:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0, 212, 255, 0.4);
 }
 
 @media screen and (max-width: 768px) {
@@ -65,5 +101,13 @@
     }
     .right-j {
         padding: 2rem;
+    }
+    .email-container {
+        min-width: auto;
+        padding: 2rem 1.5rem;
+    }
+    .btn-j {
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
     }
 }
