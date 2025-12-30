@@ -2,7 +2,6 @@
   "name": "elite-fitness-center",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://azharudin.github.io/gym-website",
   "description": "Modern gym and fitness center website with interactive features",
   "author": "azharudin",
   "dependencies": {
